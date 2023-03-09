@@ -1,0 +1,7 @@
+{ 
+    "title": "Why are we learning Flask in 2023?", 
+    "name": "UY Scuti", 
+    "description": "UY Scuti is an extreme red hypergiant or red supergiant star in the constellation Scutum.", 
+    "link": "https://en.wikipedia.org/wiki/UY_Scuti",
+    "slug" : "flask"
+}
