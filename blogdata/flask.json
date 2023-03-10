@@ -1,7 +1,7 @@
 { 
     "title": "Why are we learning Flask in 2023?", 
-    "name": "UY Scuti", 
-    "description": "UY Scuti is an extreme red hypergiant or red supergiant star in the constellation Scutum.", 
-    "link": "https://en.wikipedia.org/wiki/UY_Scuti",
-    "slug" : "flask"
+    
+    "description": " Flask is a web framework. This means flask provides you with tools, libraries and technologies that allow you to build a web application. This web application can be some web pages, a blog, a wiki or go as big as a web-based calendar application or a commercial website.",
+    
+    "slug" : "FLASK"
 }

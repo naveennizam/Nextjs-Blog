@@ -6,8 +6,6 @@ export default async function handler(req, res) {
         if(err){
             res.status(500).json({err:`NOT FOUND`})
         }
-        console.log(req.query.slug);
-        console.log(data);
         res.status(200).json(JSON.parse(data))
     })
 }
