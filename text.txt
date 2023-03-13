@@ -1,0 +1,15 @@
+1.index.js
+2.blogging.js (backend)  main blog
+3.blog.js
+4.getblog.js   (backend)  inner blog (inner blog is in slug)
+5.[slug].js
+6. postcontact.js (backend)
+7. contact.js 
+8. contactdata folder where data store
+
+
+
+
+
+first run index.js
+then blog fetch data from blogging
