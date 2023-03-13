@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     let data = await fs.promises.readdir("blogdata")
    // data type OBJECT  
     let myFile;
-    let allBlogs = [];
+    let myBLog = [];
     for (let index = 0; index < data.length; index++) {
         const item = data[index];
         // item type STRING
@@ -15,7 +15,7 @@ export default async function handler(req, res) {
        // myFile = await fs.promises.readFile((`blogdata/${item}`), ('utf-8'))
 
         // myFile type STRING
-        allBlogs.push(JSON.parse(myFile)) //JSON.parse string to object and move in an Array
+        myBLog.push(JSON.parse(myFile)) //JSON.parse string to object and move in an Array
     }
-    res.status(200).json(allBlogs)
+    res.status(200).json(myBLog)
 }

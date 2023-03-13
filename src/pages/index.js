@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+//import Image from 'next/image'
+//import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-const inter = Inter({ subsets: ['latin'] })
+//const inter = Inter({ subsets: ['latin'] })
 
 
 export default function Home() {
@@ -19,13 +19,15 @@ export default function Home() {
         <h1>Coding</h1>
         <div className={styles.description}>
           <p> I am learning Next.js </p>
-          <Image
+          {/* <Image
             src={`https://dev.freelogogenerator.com/img/hero-banner.svg`}
             alt="Picture of the author"
             width={350}
             height={400}
             priority  // lazy load false 
-          />
+          /> */}
+          <img  src='https://dev.freelogogenerator.com/img/hero-banner.svg'
+            alt="Picture of the author"/>
         </div>
       </main>
     </>

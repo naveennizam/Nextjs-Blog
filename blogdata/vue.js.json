@@ -1,0 +1,7 @@
+{ 
+    "title": "Why are we learning Vue.js in 2023?", 
+    
+    "description": " one of the simplest frameworks is Vue.js. It is worthy of eliminating the intricacies that Angular software developers face.It has a small size and presents two main benefits – visual DOM and component-based. It is also employs two-way data binding. This frontend framework is versatile, and it aids you with various tasks when building web applications.From constructing web and mobile applications to progressive web apps (PWA), it can manage both dynamic and simple developments with simplicity.",
+    
+    "slug" : "Vue.js "
+}

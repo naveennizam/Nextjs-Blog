@@ -6,13 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export"
   },
   "dependencies": {
+    "cjs": "^0.0.11",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
+    "flatted": "^3.2.7",
     "next": "^13.2.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "swr": "^2.1.0"
   }
 }

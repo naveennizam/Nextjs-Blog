@@ -1,8 +1,9 @@
 import React from 'react'   // Dynamic Routing
-import { useEffect, useState } from "react";
-import { useRouter } from 'next/router';
+import {  useState } from "react";
+//import { useRouter } from 'next/router';
 import styles from '@/styles/Home.module.css';
 import * as fs from "fs"
+
 const Slug = (props) => {
    const [blog, setblog] = useState(props.myBLog);
    // const router = useRouter(); //  managing client-side routing and accessing browser history.
@@ -30,20 +31,30 @@ const Slug = (props) => {
 export async function getStaticPaths() {
    return {
      paths: [
+        { params: { slug : "ANGULAR" } },
       { params: { slug :"NEXTJS" } }, 
-      { params: { slug : "flask" } }
+      { params: { slug :"REACT" } }, 
+      { params: { slug :"Vue.js" } }, 
+
    ],
-     fallback: false, // can also be true or 'blocking'
+     fallback: true, // can also be true or 'blocking'
    }
  }
 
+
 export async function getStaticProps(context) {
-   const { slug } = context.params
-   // let data = await fetch(`http://localhost:3000/api/getblog?slug=${slug}`)
 
-   let  myBLog = await fs.promises.readFile(`blogdata/${slug}.json`,'utf-8')
-
-   return { props: { myBLog : JSON.parse(myBLog) } }
-
+  const { slug } = context.params
+let myBLog = await fs.promises.readFile(`blogdata/${slug}.json`, 'utf-8')
+ return { props: { myBLog : JSON.parse(myBLog) } }
+ 
 }
+// export async function getServerSideProps(context) {
+  
+//    const { slug } = context.query
+//  let data = await fetch(`http://localhost:3000/api/getblog?slug=${slug}`)
+//  let myBLog = await data.json()
+//  console.log(myBLog);
+//  return { props: { myBLog  } }
+// }
 export default Slug
