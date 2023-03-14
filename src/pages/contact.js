@@ -48,7 +48,7 @@ const Contact = () => {
       <main className={styles.main}>
         <h1>Contact Us</h1>
         <form className={styles.main} onSubmit={handleSubmit} >
-          <div>
+          <div >
             <label htmlFor="name">Enter your Name </label>
             <input type="text" value={name} name = 'name' id='name' onChange={handleChange} />
           </div>
@@ -60,7 +60,6 @@ const Contact = () => {
             <label htmlFor="number" >Number</label>
             <input type="number" value={number} name='number' id='number' onChange={handleChange} />
           </div>
-
           <button type="submit"  >Submit</button>
         </form>
       </main>

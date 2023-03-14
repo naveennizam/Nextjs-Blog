@@ -19,6 +19,7 @@ export default function Home() {
         <h1>Coding</h1>
         <div className={styles.description}>
           <p> I am learning Next.js </p>
+          </div>
           {/* <Image
             src={`https://dev.freelogogenerator.com/img/hero-banner.svg`}
             alt="Picture of the author"
@@ -28,7 +29,7 @@ export default function Home() {
           /> */}
           <img  src='https://dev.freelogogenerator.com/img/hero-banner.svg'
             alt="Picture of the author"/>
-        </div>
+        
       </main>
     </>
   )
