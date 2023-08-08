@@ -1,32 +1,64 @@
-// import Link from 'next/link';
-import React from 'react'
-// import { useState } from "react";
-import styles from '@/styles/Home.module.css'
-// import * as fs from "fs"
 
-const Blog = (props) => {
-  
+import React from 'react'
+
+import styles from '@/styles/Home.module.css'
+import * as fs from "fs"
+
+
+
+const Blog = (myBLog) => {
+
 
   return (
-    <div >
-     <h1>Blog</h1>
-    </div>
-  )
+    <>
+      <div>
+        <div className={styles.main} >
+          <div className={styles.blog}>
+            {myBLog.myBLog.map((item) => {
+              return (
+                <>
+                  <div key={item.slug} >
+
+                    <div style={{ width: "38rem" }} >
+                      <div >
+                        <div className={styles.blogItem}>
+                          <a href='#'><h1>{item.slug}</h1></a>
+                          <hr style={{ marginBottom: "20px" }} />
+                          <h3 style={{ marginBottom: "20px" }}>{item.url}</h3>
+
+                          <span >{item.description}</span>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+export const getServerSideProps = async (context) => {
+  let data = await fs.promises.readdir("blogdata")
+
+  let myFile;
+  let myBLog = [];
+  
+  for (let x in data) {
+    let itemd = data[x]
+   
+    myFile = await fs.promises.readFile((`blogdata/${encodeURIComponent(itemd)}`), ('utf-8'))
+
+    myBLog.push(JSON.parse(myFile))
+  
+    return { props: { myBLog } }
+  }
+
 }
 
-// export async function getStaticProps(context) { 
-//   let data = await fs.promises.readdir("blogdata")
-//   // data type OBJECT  
-//    let myFile;
-//    let myBLog = [];
-//    for (var i = 0 ; i < data.length ; i++ ){
-//     const item = data[i]
-//     myFile = await fs.promises.readFile((`blogdata/${encodeURIComponent(item)}`), ('utf-8'))
-//     myBLog.push(JSON.parse(myFile))
-//   }
-//        return { props : { myBLog  } }
-  
-// }
 
 
 
