@@ -14,9 +14,21 @@
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "flatted": "^3.2.7",
-    "next": "^13.2.3",
+    "next": "^13.4.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "swr": "^2.1.0"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naveennizam/Nextjs-Blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naveennizam/Nextjs-Blog/issues"
+  },
+  "homepage": "https://github.com/naveennizam/Nextjs-Blog#readme"
 }
