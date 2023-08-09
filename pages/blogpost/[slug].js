@@ -1,12 +1,11 @@
 import React from 'react'   // Dynamic Routing
 import {  useState } from "react";
-//import { useRouter } from 'next/router';
 import styles from '@/styles/Home.module.css';
 import * as fs from "fs"
 
 const Slug = (props) => {
    const [blog, setblog] = useState(props.myBLog);
-
+console.log(blog);
    return <main className={styles.main}>
       <div className={styles.blog}>
          <div className={styles.blogItem}>
@@ -19,7 +18,7 @@ const Slug = (props) => {
    </main>
 }
 
-export async function getStaticPaths() {
+export async function getServerSideProps() {
    return {
      paths: [
         { params: { slug : "ANGULAR" } },
@@ -33,9 +32,10 @@ export async function getStaticPaths() {
  }
 
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
 
   const { slug } = context.params
+  console.log(slug);
 let myBLog = await fs.promises.readFile(`blogdata/${slug}.json`, 'utf-8')
  return { props: { myBLog : JSON.parse(myBLog) } }
  
